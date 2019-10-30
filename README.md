@@ -6,11 +6,11 @@ Fitur
 - Update profile
 
 ##Cara Menggunakan
--clone dari repository
--composer install
--setting .env
--artisan migrate
--artisan db:seed
+- clone dari repository
+- composer install
+- setting .env
+- artisan migrate
+- artisan db:seed
 
 ##Login
 - administrator : admin123
