@@ -1,0 +1,5 @@
+---
+deployment:
+tasks:
+- export DEPLOYPATH=/home/limakode/ppdb.limakode.com
+- /bin/rsync -Paz * $DEPLOYPATH
