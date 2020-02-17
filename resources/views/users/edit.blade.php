@@ -18,7 +18,13 @@
                               <strong>Edit User</strong>
                           </div>
                           <div class="card-body">
-                              {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'patch']) !!}
+                            @if (Request::is('profile*'))
+                            {!! Form::model($user, ['route' => ['profile.update', $user->id], 'method' => 'patch']) !!}
+                                
+                            @else
+                            {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'patch']) !!}
+                                
+                            @endif
 
                               @include('users.fields')
 
