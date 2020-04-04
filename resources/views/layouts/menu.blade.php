@@ -32,3 +32,9 @@
 @include('layouts.menu-registered')
 
 @endcan
+<li class="nav-item {{ Request::is('locAttendances*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('locAttendances.index') }}">
+        <i class="nav-icon icon-cursor"></i>
+        <span>Loc Attendances</span>
+    </a>
+</li>

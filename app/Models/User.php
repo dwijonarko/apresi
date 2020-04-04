@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use Laravel\Sanctum\HasApiTokens;
 
 /**
  * Class User
@@ -23,7 +23,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     // use SoftDeletes;
-    use Notifiable;
+    use HasApiTokens,Notifiable;
 
 
     public $table = 'users';
