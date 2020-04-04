@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', ' IKLI | Indikator Layanan Keterjangkauan Infrastruktur'),
+    'name' => env('APP_NAME', ' Siprenta Lite'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------

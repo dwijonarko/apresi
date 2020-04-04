@@ -19,10 +19,10 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">
-        <img class="navbar-brand-full" src="https://build.limakode.com/storage/2019/04/cropped-5KODE1-Long-white-1.png" style="margin-bottom: 10px" height="50"
-             alt="InfyOm Logo">
-        <img class="navbar-brand-minimized" src="https://build.limakode.com/storage/2019/04/cropped-5KODE1-Long-white-1.png" style="margin-bottom: 10px"
-             height="50" alt="Infyom Logo">
+        <img class="navbar-brand-full" src="{{asset('img/logo-full.jpg')}}" style="margin: 10px 0" height="40"
+             alt="Limakode Logo">
+        <img class="navbar-brand-minimized" src="{{asset('img/logo.png')}}" style="margin: 10px 0"
+             height="40" alt="Limakode Logo">
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
         <span class="navbar-toggler-icon"></span>

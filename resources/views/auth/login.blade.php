@@ -5,11 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Login | IKLI | Indikator Layanan Keterjangkauan Infrastruktur</title>
-    <meta name="description" content="Indikator Layanan Keterjangkauan Infrastruktur - BADAN PERENCANAAN PEMBANGUNAN DAERAH
-    PEMERINTAH KABUPATEN PROBOLINGGO
-    ">
-    <meta name="keyword" content="IKLI, Bappeda, Probolinggo Kab">
+    <title>{{config('app.name')}}</title>
+    <meta name="description" content="Sistem Presensi Digital versi LITE">
+    <meta name="keyword" content="Siprenta, Limakode">
     <link href="{{asset('css/coreui.css')}}" rel="stylesheet" />
 </head>
 <body class="app flex-row align-items-center">
@@ -69,8 +67,8 @@
                             <img src="{{asset('img/logo.png')}}" alt="" style="height: 120px; margin-top:30px;" />  
                         </div>
                         <div>
-                                <h5>BADAN PERENCANAAN PEMBANGUNAN DAERAH</h5>
-                                 <h5>PEMERINTAH KABUPATEN PROBOLINGGO</h5>
+                                <h5>Limakode</h5>
+                                 <h5>Software Development</h5>
                         </div>
                     </div>
                 </div>
