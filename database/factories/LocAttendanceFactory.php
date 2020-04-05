@@ -13,6 +13,7 @@ $factory->define(LocAttendance::class, function (Faker $faker) {
         'longitude' => $faker->word,
         'type' => $faker->word,
         'created_at' => $faker->date('Y-m-d H:i:s'),
-        'updated_at' => $faker->date('Y-m-d H:i:s')
+        'updated_at' => $faker->date('Y-m-d H:i:s'),
+        'deleted_at' => $faker->date('Y-m-d H:i:s')
     ];
 });

@@ -12,8 +12,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware'=>'auth:sanctum'],function(){
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+    Route::post('/checkin', 'AttendanceController@checkin');
+    Route::get('/checkin', 'AttendanceController@user_checkin');
 });
+
 
 Route::post('/login', 'UserController@login');

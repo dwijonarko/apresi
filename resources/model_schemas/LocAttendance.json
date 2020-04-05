@@ -1,7 +1,7 @@
 [
     {
         "name": "id",
-        "dbType": "increments",
+        "dbType": "integer,true,true",
         "htmlType": null,
         "validations": null,
         "searchable": false,
@@ -13,8 +13,8 @@
     },
     {
         "name": "user_id",
-        "dbType": "bigInteger:unsigned:foreign,users,id",
-        "htmlType": "select",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
         "validations": "required",
         "searchable": true,
         "fillable": true,
@@ -25,7 +25,7 @@
     },
     {
         "name": "latitude",
-        "dbType": "string",
+        "dbType": "string,255",
         "htmlType": "text",
         "validations": "required",
         "searchable": true,
@@ -37,7 +37,7 @@
     },
     {
         "name": "longitude",
-        "dbType": "string",
+        "dbType": "string,255",
         "htmlType": "text",
         "validations": "required",
         "searchable": true,
@@ -50,7 +50,7 @@
     {
         "name": "type",
         "dbType": "boolean",
-        "htmlType": "text",
+        "htmlType": "checkbox,1",
         "validations": "required",
         "searchable": true,
         "fillable": true,
@@ -61,26 +61,42 @@
     },
     {
         "name": "created_at",
-        "dbType": "timestamp",
-        "htmlType": null,
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
         "validations": null,
         "searchable": false,
         "fillable": false,
         "primary": false,
         "inForm": false,
         "inIndex": false,
-        "inView": true
+        "inView": false
     },
     {
         "name": "updated_at",
-        "dbType": "timestamp",
-        "htmlType": null,
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
         "validations": null,
         "searchable": false,
         "fillable": false,
         "primary": false,
         "inForm": false,
         "inIndex": false,
-        "inView": true
+        "inView": false
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,User,user_id"
     }
 ]

@@ -1,7 +1,7 @@
 <!-- User Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('user_id', 'User Id:') !!}
-    {!! Form::select('user_id', ], null, ['class' => 'form-control']) !!}
+    {!! Form::number('user_id', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Latitude Field -->
@@ -19,8 +19,12 @@
 <!-- Type Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('type', 'Type:') !!}
-    {!! Form::text('type', null, ['class' => 'form-control']) !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('type', 0) !!}
+        {!! Form::checkbox('type', '1', null) !!}
+    </label>
 </div>
+
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">

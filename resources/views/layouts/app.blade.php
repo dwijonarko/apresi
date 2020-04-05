@@ -11,6 +11,8 @@
     <!-- Bootstrap 4.1.1 -->
    
     <link href="{{asset('css/coreui.css')}}" rel="stylesheet" />
+    @yield('css')
+    @stack('css')
     <link rel="stylesheet" href="{{asset('css/custom-data-table.css')}}">
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
@@ -85,7 +87,9 @@
 </footer>
 <!-- jQuery 3.1.1 -->
 <script src="{{asset('js/app.js')}}"></script>
+
 @yield('scripts')
+@stack('scripts')
 </body>
 
 </html>

@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class LocAttendanceRepository
  * @package App\Repositories
- * @version April 4, 2020, 3:20 pm UTC
+ * @version April 5, 2020, 6:48 am UTC
 */
 
 class LocAttendanceRepository extends BaseRepository

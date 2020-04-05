@@ -29,7 +29,7 @@ class LocAttendanceDataTable extends DataTable
      */
     public function query(LocAttendance $model)
     {
-        return $model->newQuery();
+        return $model->with('user:id,name');
     }
 
     /**
@@ -65,7 +65,7 @@ class LocAttendanceDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'user_id',
+            'user.name',
             'latitude',
             'longitude',
             'type'

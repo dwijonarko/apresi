@@ -11,12 +11,12 @@
 |
 */
 
-// Route::get('/', function () {
-// 	return redirect('/home');
-// });
+Route::get('/', function () {
+	return redirect('/home');
+});
 
 
-// Auth::routes();
+Auth::routes();
 Route::get('/register', function() {
     return redirect('/login');
 });
@@ -36,5 +36,7 @@ Route::group(['middleware' => 'auth'], function() {
 
 
 
+
+Route::resource('locAttendances', 'LocAttendanceController');
 
 Route::resource('locAttendances', 'LocAttendanceController');

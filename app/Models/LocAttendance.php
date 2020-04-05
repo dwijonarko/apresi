@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class LocAttendance
  * @package App\Models
- * @version April 4, 2020, 3:20 pm UTC
+ * @version April 5, 2020, 6:48 am UTC
  *
+ * @property \App\Models\User user
  * @property integer user_id
  * @property string latitude
  * @property string longitude
@@ -21,6 +22,9 @@ class LocAttendance extends Model
 
     public $table = 'loc_attendances';
     
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
+
 
     protected $dates = ['deleted_at'];
 
@@ -58,5 +62,11 @@ class LocAttendance extends Model
         'type' => 'required'
     ];
 
-    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function user()
+    {
+        return $this->belongsTo(\App\Models\User::class, 'user_id');
+    }
 }
