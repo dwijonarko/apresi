@@ -31,25 +31,19 @@
     </button>
 
     <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item d-md-down-none">
-            <a class="nav-link" href="#">
-                <i class="icon-bell"></i>
-                <span class="badge badge-pill badge-danger">5</span>
-            </a>
-        </li>
+        
         <li class="nav-item dropdown">
+
             <a class="nav-link" style="margin-right: 10px" data-toggle="dropdown" href="#" role="button"
                aria-haspopup="true" aria-expanded="false">
-                {!! Auth::user()->role->name !!}
+               <div class="c-avatar"><img class="c-avatar-img" style="height: 30px" src="{!! asset(Auth::user()->avatar) !!}" alt="{!! Auth::user()->name !!}"> {!! Auth::user()->role->name !!}</div>
+                
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-header text-center">
                     <strong>Account</strong>
                 </div>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-envelope-o"></i> Messages
-                    <span class="badge badge-success">42</span>
-                </a>
+                
                 <div class="dropdown-header text-center">
                     <strong>Settings</strong>
                 </div>

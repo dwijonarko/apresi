@@ -11,6 +11,7 @@ use Flash;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\AppBaseController;
 use Response;
+use Illuminate\Support\Str;
 
 class UserController extends AppBaseController
 {
@@ -40,7 +41,8 @@ class UserController extends AppBaseController
      */
     public function create()
     {
-        return view('users.create');
+        $role = \App\Models\Role::pluck('name','id');
+        return view('users.create')->with(compact('role'));
     }
 
     /**
@@ -53,6 +55,14 @@ class UserController extends AppBaseController
     public function store(CreateUserRequest $request)
     {
         $input = $request->all();
+        if ($request->has('avatar')) {
+            $image = $request->file('avatar');
+            $name = Str::slug($request->input('name')).'_'.time();
+            $folder = '/uploads/avatar/';
+            $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
+            $request->avatar->move(public_path($folder), $filePath);
+            $input['avatar'] = $filePath;
+        }
 
         $user = $this->userRepository->create($input);
 
@@ -91,6 +101,7 @@ class UserController extends AppBaseController
     public function edit($id)
     {
         $user = $this->userRepository->find($id);
+        $role = \App\Models\Role::pluck('name','id');
 
         if (empty($user)) {
             Flash::error('User not found');
@@ -98,7 +109,7 @@ class UserController extends AppBaseController
             return redirect(route('users.index'));
         }
 
-        return view('users.edit')->with('user', $user);
+        return view('users.edit')->with('user', $user)->with('role',$role);
     }
 
     /**
@@ -119,11 +130,20 @@ class UserController extends AppBaseController
             return redirect(route('users.index'));
         }
 
-        $user = $this->userRepository->update($request->all(), $id);
+        $data = $request->filled('password') ? $request->all() : $request->except('password');
+        if ($request->has('avatar')) {
+            $image = $request->file('avatar');
+            $name = Str::slug($request->input('name')).'_'.time();
+            $folder = '/uploads/avatar/';
+            $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
+            $request->avatar->move(public_path($folder), $filePath);
+            $data['avatar'] = $filePath;
+        }
+        $user = $this->userRepository->update($data, $id);
 
         Flash::success('User updated successfully.');
 
-        return redirect(route('users.index'));
+        return view('users.show')->with('user', $user);
     }
 
     /**

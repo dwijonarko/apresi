@@ -19,10 +19,10 @@
                           </div>
                           <div class="card-body">
                             @if (Request::is('profile*'))
-                            {!! Form::model($user, ['route' => ['profile.update', $user->id], 'method' => 'patch']) !!}
+                            {!! Form::model($user, ['files'=>true,'route' => ['profile.update', $user->id], 'method' => 'patch']) !!}
                                 
                             @else
-                            {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'patch']) !!}
+                            {!! Form::model($user, ['files'=>true,'route' => ['users.update', $user->id], 'method' => 'patch']) !!}
                                 
                             @endif
 

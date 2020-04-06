@@ -44,6 +44,13 @@
     @endif
 </div>
 
+<div class="form-group col-sm-6">
+    {!! Form::label('avatar', 'Gambar Profile:') !!}
+    <div class="col-md-6">
+        <input id="avatar" type="file" class="form-control" name="avatar">
+    </div>
+</div>
+
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}

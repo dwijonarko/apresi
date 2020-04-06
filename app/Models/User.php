@@ -42,7 +42,8 @@ class User extends Authenticatable
         'email',
         'email_verified_at',
         'password',
-        'remember_token'
+        'remember_token',
+        'avatar',
     ];
 
     /**
@@ -58,7 +59,8 @@ class User extends Authenticatable
         'email' => 'string',
         'email_verified_at' => 'datetime',
         'password' => 'string',
-        'remember_token' => 'string'
+        'remember_token' => 'string',
+        'avatar' => 'string'
     ];
 
     /**
@@ -71,7 +73,16 @@ class User extends Authenticatable
         'username' => 'required',
         'role_id' => 'required',
         'email' => 'required',
-        'password' => 'required'
+        'password' => 'required',
+        'avatar'=>  'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+    ];
+
+     public static $update_rules = [
+        'name' => 'required',
+        'username' => 'required',
+        'role_id' => 'required',
+        'email' => 'required',
+        'avatar'=>  'required|image|mimes:jpeg,png,jpg,gif|max:2048'
     ];
 
     /**
@@ -80,5 +91,10 @@ class User extends Authenticatable
     public function role()
     {
         return $this->belongsTo(\App\Models\Role::class, 'role_id');
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        return $this->attributes['password'] = \bcrypt($value);
     }
 }

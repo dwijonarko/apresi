@@ -21,10 +21,10 @@ class UserController extends Controller
         
         $user = User::where('username', $request->username)->first();
          
-        if(!$user)return response()->json(['status' => 'failed', 'data' => 'Username tidak ditemukan']);
+        if(!$user)return response()->json(['errors' => 'Username tidak ditemukan']);
+
+        if (    !Hash::check($request->password, $user->password)) return response()->json(['errors' => 'Password salah']);
         
-        if (    !Hash::check($request->password, $user->password)) return response()->json(['status' => 'failed', 'data' => 'Password Anda Salah']);
-        
-        return response()->json(['status' => 'success', 'data' => $user->createToken($request->token)->plainTextToken]);
+        return response()->json(['errors' => false, 'token' => $user->createToken($request->token)->plainTextToken]);
     }
 }

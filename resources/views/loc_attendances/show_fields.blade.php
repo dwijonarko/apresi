@@ -1,24 +1,34 @@
 <!-- User Id Field -->
-<div class="form-group">
-    {!! Form::label('user_id', 'User Id:') !!}
-    <p>{{ $locAttendance->user_id }}</p>
+<div class="form-group row">
+    {!! Form::label('user_id', 'User Id',['class'=>'col-sm-2 control-label']) !!}
+    <div class="col-sm-6">
+    <p>: {{ $locAttendance->user->name }}</p>
+    </div>
 </div>
 
 <!-- Latitude Field -->
-<div class="form-group">
-    {!! Form::label('latitude', 'Latitude:') !!}
-    <p>{{ $locAttendance->latitude }}</p>
+<div class="form-group row">
+    {!! Form::label('latitude', 'Latitude',['class'=>'col-sm-2 control-label']) !!}
+    <div class="col-sm-6">
+    <p>: {{ $locAttendance->latitude }}</p>
+    </div>
 </div>
 
 <!-- Longitude Field -->
-<div class="form-group">
-    {!! Form::label('longitude', 'Longitude:') !!}
-    <p>{{ $locAttendance->longitude }}</p>
+<div class="form-group row">
+    {!! Form::label('longitude', 'Longitude',['class'=>'col-sm-2 control-label']) !!}
+    <div class="col-sm-6">
+    <p>: {{ $locAttendance->longitude }}</p>
+    </div>
 </div>
 
 <!-- Type Field -->
-<div class="form-group">
-    {!! Form::label('type', 'Type:') !!}
-    <p>{{ $locAttendance->type }}</p>
+<div class="form-group row">
+    {!! Form::label('type', 'Type',['class'=>'col-sm-2 control-label']) !!}
+    <div class="col-sm-6">
+    <p>: {{ $locAttendance->type }}</p>
+    </div>
 </div>
-
+<div class="form-group row">
+    <div id="mapid" style="height:400px;width:600px;margin:0 10px"></div>
+</div> 

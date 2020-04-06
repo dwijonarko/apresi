@@ -18,7 +18,7 @@
                                 <strong>Create User</strong>
                             </div>
                             <div class="card-body">
-                                {!! Form::open(['route' => 'users.store']) !!}
+                                {!! Form::open(['route' => 'users.store','files'=>true]) !!}
 
                                    @include('users.fields')
 
