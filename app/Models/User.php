@@ -26,7 +26,8 @@ class User extends Authenticatable
     use HasApiTokens,Notifiable;
 
 
-    public $table = 'users';
+    protected $table = 'users';
+    protected $hidden = ['password','email_verified_at','remember_token'];
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
