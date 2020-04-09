@@ -47,6 +47,6 @@ crossorigin=""></script>
 		zoomOffset: -1
 	}).addTo(mymap);
     var marker = L.marker([{{$locAttendance->latitude }}, {{$locAttendance->longitude }}]).addTo(mymap);
-    marker.bindPopup("<b>{{ $locAttendance->user->name }}</b><br>{{ $locAttendance->created_at }}").openPopup();
+    marker.bindPopup("<b>{{ $locAttendance->user->name }}</b><br>{{ $locAttendance->created_at }}<br><img src='{{asset($locAttendance->image_front)}}' class='img img-responsive' style='width:100px;image-orientation: from-image;margin:0 10px;'/><img src='{{asset($locAttendance->image_back)}}' class='img img-responsive' style='width:100px;image-orientation: from-image;margin:0 10px;'/>").openPopup();
 </script>
 @endsection

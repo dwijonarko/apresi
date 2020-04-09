@@ -17,6 +17,9 @@ class LocAttendanceDataTable extends DataTable
     public function dataTable($query)
     {
         $dataTable = new EloquentDataTable($query);
+        $dataTable->editColumn('created_at', function ($query) {
+            return \Carbon\Carbon::parse($query->created_at)->format('d/m/Y H:i:s');
+        });
 
         return $dataTable->addColumn('action', 'loc_attendances.datatables_actions');
     }
@@ -46,7 +49,7 @@ class LocAttendanceDataTable extends DataTable
             ->parameters([
                 'dom'       => 'Bfrtip',
                 'stateSave' => true,
-                'order'     => [[0, 'desc']],
+                'order'     => [[0, 'asc'],[3,'desc']],
                 'buttons'   => [
                     ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
                     ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner',],
@@ -68,7 +71,7 @@ class LocAttendanceDataTable extends DataTable
             'user.name',
             'latitude',
             'longitude',
-            'type'
+            'created_at'
         ];
     }
 
