@@ -29,7 +29,7 @@ class LocAttendanceDataTable extends DataTable
      */
     public function query(LocAttendance $model)
     {
-        return $model->with('user:id,name');
+        return $model->with('user:id,name')->newQuery()->addSelect('loc_attendances.*');
     }
 
     /**

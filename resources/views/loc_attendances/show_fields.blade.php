@@ -30,5 +30,14 @@
     </div>
 </div>
 <div class="form-group row">
+    {!! Form::label('attachments', 'Attachments',['class'=>'col-sm-2 control-label']) !!}
+    <div class="col-sm-4">
+    <img src="{{asset($locAttendance->image_front)}}" class="img img-responsive" style="width:300px" />
+    </div>
+    <div class="col-sm-4">
+    <img src="{{asset($locAttendance->image_back)}}" class="img img-responsive" style="width:300px" />
+    </div>
+</div>
+<div class="form-group row">
     <div id="mapid" style="height:400px;width:600px;margin:0 10px"></div>
 </div> 

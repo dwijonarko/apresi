@@ -34,7 +34,9 @@ class LocAttendance extends Model
         'user_id',
         'latitude',
         'longitude',
-        'type'
+        'type',
+        'image_front',
+        'image_back'
     ];
 
     /**
@@ -47,7 +49,9 @@ class LocAttendance extends Model
         'user_id' => 'integer',
         'latitude' => 'string',
         'longitude' => 'string',
-        'type' => 'boolean'
+        'type' => 'boolean',
+        'image_front'=>'string',
+        'image_back'=>'string'
     ];
 
     /**

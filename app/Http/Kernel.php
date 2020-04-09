@@ -40,7 +40,7 @@ class Kernel extends HttpKernel
 
         'api' => [
             EnsureFrontendRequestsAreStateful::class, //TAMBAHKAN BARIS INI
-            'throttle:60,1',
+            // 'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];
