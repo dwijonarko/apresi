@@ -1,3 +1,9 @@
+div.dataTables_wrapper div.dataTables_paginate {
+    margin-left: auto;
+    white-space: nowrap;
+    text-align: right;
+    float: right;
+}
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
     background: unset;
     border: 1px solid transparent;
