@@ -74,7 +74,7 @@ class User extends Authenticatable
         'username' => 'required',
         'role_id' => 'required',
         'email' => 'required',
-        'password' => 'required',
+        'password' => 'required|min:6|confirmed',
         'avatar'=>  'required|image|mimes:jpeg,png,jpg,gif|max:2048'
     ];
 
@@ -83,7 +83,8 @@ class User extends Authenticatable
         'username' => 'required',
         'role_id' => 'required',
         'email' => 'required',
-        'avatar'=>  'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+        'password' => 'nullable|min:6|confirmed',
+        'avatar'=>  'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
     ];
 
     /**

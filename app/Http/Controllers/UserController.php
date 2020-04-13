@@ -137,13 +137,17 @@ class UserController extends AppBaseController
             $folder = '/uploads/avatar/';
             $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
             $request->avatar->move(public_path($folder), $filePath);
+            if(is_file(public_path($user->avatar))){
+                unlink(public_path($user->avatar));
+            } 
             $data['avatar'] = $filePath;
         }
         $user = $this->userRepository->update($data, $id);
 
         Flash::success('User updated successfully.');
-
-        return view('users.show')->with('user', $user);
+        return redirect(route('profile.show',[$user]));
+        
+        // return view('users.show')->with('user', $user);
     }
 
     /**

@@ -17,7 +17,7 @@
 @else
 <div class="form-group col-sm-6">
     {!! Form::label('opd_id', 'Role:') !!}
-    <p>{!! $user->role->name  ? $user->role->name : 'Administrator' !!}</p>
+    <p>{!! $user->role->name  ? $user->role->name : 'Administrator' !!} {!! Form::hidden('role_id',$user->role_id) !!} </p>
 </div>
 @endif
 

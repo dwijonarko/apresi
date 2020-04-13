@@ -23,7 +23,7 @@
 <div class="form-group row">
     {!! Form::label('role_id', 'Role',['class'=>'control-label col-sm-2']) !!}
     <div class="col-sm-4">
-    <p>: {!! $user->role->name !!}</p>
+    <p>: {!! $user->role->name !!} </p>
     </div>
 </div>
 
