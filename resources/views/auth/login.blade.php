@@ -66,10 +66,6 @@
                         <div class="logo">
                             <img src="{{asset('img/logo.png')}}" alt="" style="height: 120px; margin-top:30px;" />  
                         </div>
-                        <div>
-                                <h5>Limakode</h5>
-                                 <h5>Software Development</h5>
-                        </div>
                     </div>
                 </div>
             </div>

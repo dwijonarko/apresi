@@ -145,9 +145,15 @@ class UserController extends AppBaseController
         $user = $this->userRepository->update($data, $id);
 
         Flash::success('User updated successfully.');
+        if ($user->role->id=='1') {
+            return view('users.show')->with('user', $user);
+            # code...
+        } else {
         return redirect(route('profile.show',[$user]));
+            # code...
+        }
         
-        // return view('users.show')->with('user', $user);
+        
     }
 
     /**

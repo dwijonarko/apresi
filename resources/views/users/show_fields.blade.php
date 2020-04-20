@@ -5,24 +5,24 @@
 	<div class="col-sm-6">
 		<!-- Name Field -->
 <div class="form-group row">
-    {!! Form::label('name', 'Name',['class'=>'control-label col-sm-2']) !!}
-    <div class="col-sm-4">
+    {!! Form::label('name', 'Name',['class'=>'control-label col-sm-4']) !!}
+    <div class="col-sm-6">
     <p>: {!! $user->name !!}</p>
     </div>
 </div>
 
 <!-- Username Field -->
 <div class="form-group row">
-    {!! Form::label('username', 'Username',['class'=>'control-label col-sm-2']) !!}
-    <div class="col-sm-4">
+    {!! Form::label('username', 'Username',['class'=>'control-label col-sm-4']) !!}
+    <div class="col-sm-6">
     <p>: {!! $user->username !!}</p>
     </div>
 </div>
 
 <!-- Role Id Field -->
 <div class="form-group row">
-    {!! Form::label('role_id', 'Role',['class'=>'control-label col-sm-2']) !!}
-    <div class="col-sm-4">
+    {!! Form::label('role_id', 'Role',['class'=>'control-label col-sm-4']) !!}
+    <div class="col-sm-6">
     <p>: {!! $user->role->name !!} </p>
     </div>
 </div>
@@ -30,8 +30,8 @@
 
 <!-- Email Field -->
 <div class="form-group row">
-    {!! Form::label('email', 'Email',['class'=>'control-label col-sm-2']) !!}
-    <div class="col-sm-4">
+    {!! Form::label('email', 'Email',['class'=>'control-label col-sm-4']) !!}
+    <div class="col-sm-6">
     <p>: {!! $user->email !!}</p>
     </div>
 </div>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4541886d5c2203cbde77b5ea77af66f",
+    "content-hash": "bb56f407c2d7f19eaf5581e9b2f9d6e1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,6 +57,67 @@
                 "stack"
             ],
             "time": "2019-12-24T22:41:47+00:00"
+        },
+        {
+            "name": "barryvdh/laravel-snappy",
+            "version": "v0.4.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-snappy.git",
+                "reference": "c412d0c8f40b1326ba0fb16e94957fd1e68374f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-snappy/zipball/c412d0c8f40b1326ba0fb16e94957fd1e68374f0",
+                "reference": "c412d0c8f40b1326ba0fb16e94957fd1e68374f0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^5.5|^6|^7",
+                "illuminate/support": "^5.5|^6|^7",
+                "knplabs/knp-snappy": "^1",
+                "php": ">=7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.4-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\Snappy\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "PDF": "Barryvdh\\Snappy\\Facades\\SnappyPdf",
+                        "SnappyImage": "Barryvdh\\Snappy\\Facades\\SnappyImage"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\Snappy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Snappy PDF/Image for Laravel",
+            "keywords": [
+                "image",
+                "laravel",
+                "pdf",
+                "snappy",
+                "wkhtmltoimage",
+                "wkhtmltopdf"
+            ],
+            "time": "2020-02-25T20:52:15+00:00"
         },
         {
             "name": "brick/math",
@@ -1158,6 +1219,72 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
+            "name": "knplabs/knp-snappy",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/snappy.git",
+                "reference": "7bac60fb729147b7ccd8532c07df3f52a4afa8a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/snappy/zipball/7bac60fb729147b7ccd8532c07df3f52a4afa8a4",
+                "reference": "7bac60fb729147b7ccd8532c07df3f52a4afa8a4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "psr/log": "^1.0",
+                "symfony/process": "~3.4||~4.3||~5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~7.4"
+            },
+            "suggest": {
+                "h4cc/wkhtmltoimage-amd64": "Provides wkhtmltoimage-amd64 binary for Linux-compatible machines, use version `~0.12` as dependency",
+                "h4cc/wkhtmltoimage-i386": "Provides wkhtmltoimage-i386 binary for Linux-compatible machines, use version `~0.12` as dependency",
+                "h4cc/wkhtmltopdf-amd64": "Provides wkhtmltopdf-amd64 binary for Linux-compatible machines, use version `~0.12` as dependency",
+                "h4cc/wkhtmltopdf-i386": "Provides wkhtmltopdf-i386 binary for Linux-compatible machines, use version `~0.12` as dependency",
+                "wemersonjanuario/wkhtmltopdf-windows": "Provides wkhtmltopdf executable for Windows, use version `~0.12` as dependency"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Snappy\\": "src/Knp/Snappy"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/snappy/contributors"
+                }
+            ],
+            "description": "PHP5 library allowing thumbnail, snapshot or PDF generation from a url or a html page. Wrapper for wkhtmltopdf/wkhtmltoimage.",
+            "homepage": "http://github.com/KnpLabs/snappy",
+            "keywords": [
+                "knp",
+                "knplabs",
+                "pdf",
+                "snapshot",
+                "thumbnail",
+                "wkhtmltopdf"
+            ],
+            "time": "2020-01-20T08:30:30+00:00"
+        },
+        {
             "name": "laracasts/flash",
             "version": "3.1",
             "source": {
@@ -2027,6 +2154,65 @@
                 "vector"
             ],
             "time": "2019-10-06T11:29:25+00:00"
+        },
+        {
+            "name": "michael-schaefer-eu/wkhtmltox",
+            "version": "0.12.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/michael-schaefer-eu/wkhtmltox.git",
+                "reference": "5248d03a12ca97965d2cfb5e6e0a22817fcd5744"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/michael-schaefer-eu/wkhtmltox/zipball/5248d03a12ca97965d2cfb5e6e0a22817fcd5744",
+                "reference": "5248d03a12ca97965d2cfb5e6e0a22817fcd5744",
+                "shasum": ""
+            },
+            "replace": {
+                "h4cc/wkhtmltoimage-amd64": "0.12.4",
+                "h4cc/wkhtmltoimage-i386": "0.12.4",
+                "h4cc/wkhtmltopdf-amd64": "0.12.4",
+                "h4cc/wkhtmltopdf-i386": "0.12.4"
+            },
+            "bin": [
+                "bin/wkhtmltoimage-bionic-amd64",
+                "bin/wkhtmltopdf-bionic-amd64",
+                "bin/wkhtmltoimage-bionic-i386",
+                "bin/wkhtmltopdf-bionic-i386"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wkhtmltox\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Schaefer",
+                    "email": "mail@michael-schaefer.eu",
+                    "role": "Composer Package Developer"
+                }
+            ],
+            "description": "wkhtmltopdf and wkhtmltoimage linux binaries - Convert HTML to PDF or IMAGE using Webkit (QtWebKit)",
+            "homepage": "http://wkhtmltopdf.org/",
+            "keywords": [
+                "binary",
+                "convert",
+                "htmltoimage",
+                "htmltopdf",
+                "htmltox",
+                "jpg",
+                "pdf",
+                "png",
+                "snapshot",
+                "thumbnail"
+            ],
+            "time": "2020-01-13T11:03:40+00:00"
         },
         {
             "name": "monolog/monolog",

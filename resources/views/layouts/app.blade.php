@@ -2,10 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Indikator Layanan Keterjangkauan Infrastruktur - BADAN PERENCANAAN PEMBANGUNAN DAERAH
-    PEMERINTAH KABUPATEN PROBOLINGGO
-    ">
-    <meta name="keyword" content="IKLI, Bappeda, Probolinggo Kab">
+    <meta name="description" content="Aplikasi Absensi Berbasis GPS ">
+    <meta name="keyword" content="absensi, gps">
     <title>{{config('app.name')}}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 4.1.1 -->
@@ -21,7 +19,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">
-        <img class="navbar-brand-full" src="{{asset('img/logo-full.jpg')}}" style="margin: 10px 0" height="40"
+        <img class="navbar-brand-full" src="{{asset('img/logo-full.jpg')}}" style="margin: 10px 0;padding: 2px" height="40"
              alt="Limakode Logo">
         <img class="navbar-brand-minimized" src="{{asset('img/logo.png')}}" style="margin: 10px 0"
              height="40" alt="Limakode Logo">
@@ -66,8 +64,7 @@
 </div>
 <footer class="app-footer">
     <div>
-        <a href="https://limakode.com">Limakode </a>
-        <span>&copy; 2019 Limakode Software Development</span>
+        <a href="https://dwijonarko.my.id">Dwijonarko </a>
     </div>
 
 </footer>

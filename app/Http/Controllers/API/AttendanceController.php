@@ -38,7 +38,7 @@ class AttendanceController extends Controller
         $image = preg_replace('/^data:image\/\w+;base64,/', '', $user_image);
         $extension = explode(';', $user_image)[0];
         $extension = explode('/', $extension)[1]; // png or jpg etc
-        $imageName = 'uploads/attachments/'.$name.'.'.$extension;
+        $imageName = ('uploads/attachments/').$name.'.'.$extension;
         \File::put( $imageName, base64_decode($image));
         return $imageName;
     }
