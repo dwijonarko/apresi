@@ -32,7 +32,13 @@ class LocAttendanceDataTable extends DataTable
      */
     public function query(LocAttendance $model)
     {
-        return $model->with('user:id,name')->newQuery()->addSelect('loc_attendances.*');
+        return $model->with('user:id,name')
+            ->when(!auth()->user()->can('isAdmin'), function($query) {
+                $query->where('user_id', auth()->user()->id);
+            })    
+            ->addSelect('loc_attendances.*')
+            ->orderBy('created_at')
+            ->newQuery();
     }
 
     /**
