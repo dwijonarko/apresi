@@ -12,11 +12,10 @@
 */
 
 Route::get('/', function () {
-	return redirect('/home');
-	
+	return view('welcome');
 });
 
-
+Route::post('contact-us', 'ContactController@saveContact');
 Auth::routes();
 Route::get('/register', function() {
     return redirect('/login');
