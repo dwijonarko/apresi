@@ -1,10 +1,11 @@
-# Limakode Master Aplikasi
+# Aplikasi Presesnsi Berbasis Lokasi
 
 Fitur
 - CRUD Roles
 - CRUD User
 - Hak Akses menu layouts
 - Update profile
+- Melihat presensi dari aplikasi mobile
 
 ## Cara Menggunakan
 - clone dari repository
